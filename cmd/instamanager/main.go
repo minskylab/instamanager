@@ -12,8 +12,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+
+	// manager.Publish(category string, data interface{})
+
 	// Expose pub-sub. You could omit the publish handler if you don't want
 	// to allow clients to publish. For example, if clients only subscribe to data.
+
 	http.HandleFunc("/events", manager.SubscriptionHandler)
 	http.HandleFunc("/publish", manager.PublishHandler)
 	http.ListenAndServe("127.0.0.1:8888", nil)
