@@ -15,7 +15,7 @@ func main() {
 
 	// manager.Publish(category string, data interface{})
 
-	// Expose pub-sub. You could omit the publish handler if you don't want
+	// Expose pub-sub. You could omit the publish handler if you don't want.
 	// to allow clients to publish. For example, if clients only subscribe to data.
 
 	http.HandleFunc("/events", manager.SubscriptionHandler)

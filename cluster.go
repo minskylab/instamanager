@@ -61,7 +61,9 @@ func (c *Cluster) requestTask(w *Worker) {
 	}
 }
 
-func 
+func (c *Cluster) resolveTask(w *Worker) {
+	
+}
 
 // func (c *Cluster) taskLoop(task *Task, times int) {
 // 	startTime := time.Now()
